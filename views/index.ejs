@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scour Links - Home</title>
+
+    <link rel="icon" href="./images/icon.png">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+</head>
+<body>
+
+    <%- include('./includes/beta.ejs') %>
+    <%- include('./includes/navbar.ejs') %>
+
+    <div class="contaner">
+    
+    <div class="head">
+
+    <div class="head-text">
+    <h3>Create your short link now!</h3>
+    <h4>a simple and free to use urls shortener service.</h4>    
+    </div>
+
+    <div class="head-icon">
+    <img src="/images/links.svg">
+    </div>
+
+
+    </div>
+
+    <div class="content">
+    
+    <div class="features">
+
+    <div class="row">
+    
+    <div class="box">
+
+    <div class="box-text">
+    <h5>Unlimited links</h5>
+    <h6>Create links as you want, and edit them in any time without limit!</h6>
+    </div>
+
+    <div class="box-icon">
+    <i class="fas fa-link"></i>
+    </div>
+
+    </div>
+
+    <div class="box">
+
+    <div class="box-text">
+    <h5>Automatic delete</h5>
+    <h6>You can set the automatically delete for the link after a specified amount of usage!</h6>
+    </div>
+
+    <div class="box-icon">
+    <i class="fas fa-calendar"></i>
+    </div>
+
+    </div>
+
+    <div class="box">
+
+    <div class="box-text">
+    <h5>Links History</h5>
+    <h6>View your link history stats and usage history in one page!</h6>
+    </div>
+
+    <div class="box-icon">
+    <i class="fas fa-history"></i>
+    </div>
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <div class="footer">
+    <h6>[ Made With <i class="fas fa-heart"></i> By <span>Alg-MapPer</span> ]</h6>
+    </div>
+
+    <button onclick="toggleNewsMessage()" class="news">
+    <i class="fas fa-newspaper"></i>
+    </button>
+
+    <div class="newsDiv">
+    <div class="shadow"></div>
+
+    <div class="news-message">
+    <div class="news-title">
+    <p> <i class="fas fa-newspaper"></i> Announcement Message</p>
+    </div>
+
+    <div class="news-content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dicta voluptas odio molestiae reiciendis cum sequi minus itaque distinctio accusantium!</p>
+    </div>
+
+    <div class="news-button">
+    <button onclick="toggleNewsMessage()">Okay!</button>
+    <span>5 hours ago</span>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- Used Plugins -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

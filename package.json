@@ -1,0 +1,34 @@
+{
+  "name": "cool-things",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alg-mapper/string-tools": "^1.0.3",
+    "body-parser": "^1.20.0",
+    "chalk": "^4.1.2",
+    "connect-mongo": "^4.6.0",
+    "country-code-lookup": "^0.0.20",
+    "discord.js": "^14.3.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "geoip-country": "^4.1.19",
+    "http": "^0.0.1-security",
+    "ip-country": "^1.0.2",
+    "moment": "^2.29.4",
+    "mongoose": "^6.5.3",
+    "nodemon": "^2.0.19",
+    "passport": "^0.6.0",
+    "passport-discord": "^0.1.4",
+    "path": "^0.12.7",
+    "uninstall": "^0.0.0",
+    "url": "^0.11.0",
+    "visitor-info": "^0.5.0"
+  }
+}

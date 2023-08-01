@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scour Links - Link</title>
+
+    <link rel="icon" href="../images/icon.png">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+</head>
+<body>
+
+    <%- include('./includes/beta.ejs') %>
+    <%- include('./includes/navbar.ejs') %>
+
+    <div class="contaner">
+    
+    <div class="content">
+
+    <div class="link">
+
+    <div class="link-box">
+
+    <div class="link-head">
+    <h4><%= data.title %></h4>
+    <h5><%= data.description %></h5>
+    </div>
+
+    <div class="link-content">
+    
+    <div class="link-row">
+    
+    <div class="link-field">
+    <div class="link-field-title">
+    <h6><i class="fas fa-file-code"></i> Overview</h6>
+    </div>
+
+    <div class="link-field-content">
+    <div class="link-field-row">
+    <div class="link-field-content-box">
+    <div class="link-field-content-box-icon"><i class="fas fa-user"></i></div>
+    <div class="link-field-content-box-text"><p>Usage</p></div>
+    <div class="link-field-content-box-value"><p><%= data.uses %></p></div>
+    </div>
+    <div class="link-field-content-box">
+    <div class="link-field-content-box-icon"><i class="fas fa-user-secret"></i></div>
+    <div class="link-field-content-box-text"><p>Privacy</p></div>
+    <div class="link-field-content-box-value"><p><%= data.privacy %></p></div>
+    </div>
+    <div class="link-field-content-box">
+    <div class="link-field-content-box-icon"><i class="fas fa-alarm-clock"></i></div>
+    <div class="link-field-content-box-text"><p>Added</p></div>
+    <div class="link-field-content-box-value"><p><%= moment(data.time).fromNow() %></p></div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="link-field">
+    <div class="link-field-title">
+    <h6><i class="fas fa-history"></i> History</h6>
+    </div>
+
+    <div class="link-field-content">
+
+    <% if(data.history.length === 0) { %>
+    <h6 class="nothingHistory">Nothing in History!</h6>
+    <% } %>
+
+    <% for(let h of data.history) { %>
+    <div class="link-field-content-history">
+    <p><%= h.action %> <span class="by"><%= h.special || h.username %></span>. <span class="time"><%= moment(h.time).fromNow() %></span></p>
+    </div>
+    <% } %>
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <div class="footer">
+    <h6>[ Made With <i class="fas fa-heart"></i> By <span>Alg-MapPer</span> ]</h6>
+    </div>
+    
+    <!-- Used Plugins -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script src="../js/main.js"></script>
+
+</body>
+</html>

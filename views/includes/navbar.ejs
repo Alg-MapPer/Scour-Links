@@ -1,0 +1,27 @@
+<div class="navbar">
+
+    <div class="navbar-logo">
+        <h4><a href="/">Scour Links <img id="flagImage" data-tippy-content="<%= countryCode.toUpperCase() %>" style="margin-left: 5px;" src="<%= country %>" width="25"></a></h4>
+    </div>
+
+    <div class="navbar-links">
+        <a href="/">Home</a>
+        <a href="https://www.paypal.com/paypalme/algmapper" target="_blank">Donate</a>
+        <a href="/support">Support</a>
+    </div>
+
+    <% if(!user) { %>
+        <div class="navbar-login">
+            <a href="/login" data-tippy-content="Login with discord" id="login"><i class="fab fa-discord"></i> Login</a>
+        </div>
+        <% } else { %>
+            <div class="navbar-login">
+                <a href="/new" data-tippy-content="Create new link" id="new"><i class="fas fa-link"></i> New</a>
+            </div>
+            <% } %>
+
+                <div class="mobile-menu">
+                    <a onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
+                </div>
+
+</div>

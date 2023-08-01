@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scour Links - New</title>
+
+    <link rel="icon" href="./images/icon.png">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
+</head>
+<body>
+
+    <%- include('./includes/beta.ejs') %>
+    <%- include('./includes/navbar.ejs') %>
+
+    <div class="contaner">
+    
+    <div class="content">
+
+    <div class="new">
+
+    <div class="submit-box">
+
+    <div class="new-head">
+    <h4>Register new link</h4>
+    <h5>Hey <span style="color: var(--color);"><%= user.username %></span>, please make sure to read ours service rules below!</h5>
+    </div>
+
+    <div class="new-content">
+    
+    <div class="new-row">
+    
+    <div class="new-box">
+    <h6>title</h6>
+    <input name="link_title" id="link_title" placeholder="your link title/name." required>
+    </div>
+
+    <div class="new-box">
+    <h6>privacy</h6>
+    <select name="link_privacy" id="link_privacy" required>
+    <option value="public" selected>Public</option>
+    <option value="private">Private</option>
+    </select>
+    </div>
+
+    <div class="new-box">
+    <h6>value</h6>
+    <input name="link_value" id="link_value" placeholder="your link here." required>
+    </div>
+
+    <div class="new-box">
+    <h6>Max Usage</h6>
+    <input oninput="if(this.value > 99) this.value = 99; if(this.value < 0) this.value = 0;" type="number" min="0" max="99" name="link_maxUsage" id="link_maxUsage" placeholder="usage number or 0" required>
+    </div>
+
+    </div>
+
+    <div class="new-box">
+    <h6 style="margin-top: 30px;">Description</h6>
+    <textarea name="link_description" id="link_description" placeholder="input a description about your link!" required></textarea>
+    </div>
+    
+    <div class="rules-box">
+    <h6>your link must not contain</h6>
+
+    <p>sexual or inappropriate sites!</p>
+    <p>bad words in the title or description!</p>
+    
+    </div>
+
+    <div class="button-box">
+    <button id="new_link"><i class="fas fa-plus"></i> Create</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+    <div class="footer">
+    <h6>[ Made With <i class="fas fa-heart"></i> By <span>Alg-MapPer</span> ]</h6>
+    </div>
+
+    <div class="alert">
+    <div class="alert-icon">
+    <i class="fas fa-check"></i>
+    </div>
+    <div class="alert-content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic.</p>
+    </div>
+    </div>
+
+    <!-- Used Plugins -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
